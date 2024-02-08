@@ -22,7 +22,8 @@ mod error;
 mod evaluation;
 mod keygen;
 mod lookup;
-pub(crate) mod permutation;
+/// Visibility changed for analyzer
+pub mod permutation;
 mod vanishing;
 
 mod prover;

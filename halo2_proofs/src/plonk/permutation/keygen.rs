@@ -12,15 +12,20 @@ use crate::{
 };
 
 #[derive(Debug)]
-pub(crate) struct Assembly {
-    columns: Vec<Column<Any>>,
-    pub(crate) mapping: Vec<Vec<(usize, usize)>>,
+/// Visibility changed for analyzer
+pub struct Assembly {
+    /// Visibility changed for analyzer
+    pub columns: Vec<Column<Any>>,
+    /// Visibility changed for analyzer
+    pub mapping: Vec<Vec<(usize, usize)>>,
     aux: Vec<Vec<(usize, usize)>>,
-    sizes: Vec<Vec<usize>>,
+    /// Visibility changed for analyzer
+    pub sizes: Vec<Vec<usize>>,
 }
 
 impl Assembly {
-    pub(crate) fn new(n: usize, p: &Argument) -> Self {
+    /// Visibility changed for analyzer
+    pub fn new(n: usize, p: &Argument) -> Self {
         // Initialize the copy vector to keep track of copy constraints in all
         // the permutation arguments.
         let mut columns = vec![];
@@ -39,8 +44,8 @@ impl Assembly {
             sizes: vec![vec![1usize; n]; p.columns.len()],
         }
     }
-
-    pub(crate) fn copy(
+    /// Visibility changed for analyzer
+    pub fn copy(
         &mut self,
         left_column: Column<Any>,
         left_row: usize,
