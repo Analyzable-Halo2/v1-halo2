@@ -1152,7 +1152,8 @@ pub struct ConstraintSystem<F: Field> {
     /// This is a cached vector that maps virtual selectors to the concrete
     /// fixed column that they were compressed into. This is just used by dev
     /// tooling right now.
-    pub(crate) selector_map: Vec<Column<Fixed>>,
+    /// Visibility changed for analyzer
+    pub selector_map: Vec<Column<Fixed>>,
 
     /// Visibility changed for analyzer
     pub gates: Vec<Gate<F>>,
